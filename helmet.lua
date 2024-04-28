@@ -1,7 +1,8 @@
+if game.PlaceId == 9503261072 then
 if not game:IsLoaded() then
     game.Loaded:Wait()
 end   
-clear_teleport_queue()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/RomanTrotman/helmet/main/failsafe.lua", true))()
 wait(4)
 game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Briefing"):WaitForChild("SetReady"):FireServer()
 wait(4)
@@ -102,7 +103,6 @@ game:GetService("Players").LocalPlayer.Character:FindFirstChild("HumanoidRootPar
 clip()
 task.spawn(win)
 wait(4.5)
-queue_on_teleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/RomanTrotman/helmet/main/helmet.lua'))()")
 game:GetService("ReplicatedStorage").Remotes.Teleport.Replay:InvokeServer()
-
+end
 
