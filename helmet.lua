@@ -1,6 +1,7 @@
  if not game:IsLoaded() then
         game.Loaded:Wait()
     end   
+clear_teleport_queue()
 wait(4)
     game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Briefing"):WaitForChild("SetReady"):FireServer()
     wait(4)
