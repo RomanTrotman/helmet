@@ -1,10 +1,6 @@
     if not game:IsLoaded() then
         game.Loaded:Wait()
     end   
-Players.LocalPlayer.OnTeleport:Connect(function(State)
-		queue_on_teleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/RomanTrotman/helmet/main/helmet.lua'))()")
-end)
-
 wait(4)
     game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Briefing"):WaitForChild("SetReady"):FireServer()
     wait(4)
@@ -49,4 +45,5 @@ wait(4)
     char:MoveTo(Objective.EscapeZone.Position)
     wait(3)
     game:GetService("ReplicatedStorage").Remotes.Teleport.Replay:InvokeServer()
+queueonteleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/RomanTrotman/helmet/main/helmet.lua'))()")
 
