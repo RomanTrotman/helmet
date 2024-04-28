@@ -4,11 +4,11 @@
 clear_teleport_queue()
 wait(4)
     game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Briefing"):WaitForChild("SetReady"):FireServer()
-    wait(4)
+    wait(6)
     game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Briefing"):WaitForChild("CutsceneSkipVote"):FireServer()
     repeat task.wait(0.025) until Workspace:FindFirstChild(game:GetService("Players").LocalPlayer.Name)
     --  
-    wait(2)
+    wait(4)
     local plr = game:GetService("Players").LocalPlayer
     local char = plr.Character
     local Map = game:GetService("Workspace").Map
@@ -17,6 +17,8 @@ wait(4)
     local KC = CRoom.KeycardSpawns:FindFirstChild("Keycard")
     local Spawn = Instance.new("Part")
     Spawn.Position = char.Head.Position
+wait(1)
+char.HumanoidRootPart.Anchored = true
     char.HumanoidRootPart.Position = KC.Handle.Position
     wait(1)
     fireproximityprompt(KC.Base.GrabPrompt)
@@ -43,6 +45,8 @@ wait(4)
         end
     end
     wait(1)
+char.HumanoidRootPart.Anchored = false
+wait(0.2)
     char:MoveTo(Objective.EscapeZone.Position)
     wait(3)
 queueonteleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/RomanTrotman/helmet/main/helmet.lua'))()")
