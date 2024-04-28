@@ -2,7 +2,7 @@ if game.PlaceId == 13943784614 then
 if not game:IsLoaded() then
     game.Loaded:Wait()
 end   
-loadstring(game:HttpGet("https://raw.githubusercontent.com/RomanTrotman/helmet/main/failsafe.lua", true))()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/RomanTrotman/helmet/main/failsafe.lua'))()
 wait(4)
 game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Briefing"):WaitForChild("SetReady"):FireServer()
 wait(4)
