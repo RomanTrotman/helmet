@@ -88,7 +88,7 @@ end
 end
 wait(1)
 game:GetService("Players").LocalPlayer.Character:FindFirstChild("HumanoidRootPart").float:Destroy()
-char:MoveTo(Objective.EscapeZone.Position + Vector3.new(0, 10, 0))
+char:MoveTo(Objective.EscapeZone.Position + Vector3.new(0, 6, 0))
 wait(4.5)
 queue_on_teleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/RomanTrotman/helmet/main/helmet.lua'))()")
 game:GetService("ReplicatedStorage").Remotes.Teleport.Replay:InvokeServer()
