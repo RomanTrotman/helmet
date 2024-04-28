@@ -18,6 +18,7 @@ wait(4)
     local Spawn = Instance.new("Part")
     Spawn.Position = char.Head.Position
 wait(1)
+char.Torso.Anchored = true
 char.HumanoidRootPart.Anchored = true
     char.HumanoidRootPart.Position = KC.Handle.Position
     wait(1)
@@ -46,6 +47,7 @@ char.HumanoidRootPart.Anchored = true
     end
     wait(1)
 char.HumanoidRootPart.Anchored = false
+char.Torso.Anchored = false
 wait(0.2)
     char:MoveTo(Objective.EscapeZone.Position)
     wait(3)
