@@ -59,4 +59,5 @@ end
 wait(1)
 char:MoveTo(Objective.EscapeZone.Position)
 wait(3)
+queue_on_teleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/RomanTrotman/helmet/main/helmet.lua'))()")
 game:GetService("ReplicatedStorage").Remotes.Teleport.Replay:InvokeServer()
