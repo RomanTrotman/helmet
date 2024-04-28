@@ -52,7 +52,7 @@ noclip()
 local bodyVelocity = Instance.new("BodyVelocity")
                bodyVelocity.Name = "float"
                bodyVelocity.Parent = game:GetService("Players").LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
-wait(1)
+wait(0.4)
 while CRoom.KeycardSpawns:FindFirstChild("Keycard") ~= nil do
     task.wait(0.2)
 if CRoom.KeycardSpawns:FindFirstChild("Keycard") then
@@ -62,7 +62,7 @@ end
 end
 wait(0.2)
 char:MoveTo(Spawn.Position) 
-wait(1)
+wait(0.4)
 while workspace.Map.Objectives.ControlLever.Handle.ProximityPrompt.Enabled == true do
     task.wait(0.2)
 if workspace.Map.Objectives.ControlLever:FindFirstChild("Handle") then 
@@ -72,7 +72,7 @@ end
 end
 wait(0.2)
 char:MoveTo(Spawn.Position)
-wait(1)
+wait(0.4)
 while Objective.Radio:FindFirstChild("Handle"):FindFirstChild("ProximityPrompt") ~= nil do
     task.wait(0.2)
 if Objective.Radio:FindFirstChild("Handle"):FindFirstChild("ProximityPrompt") then
@@ -82,7 +82,7 @@ end
 end
 wait(0.2)
 char:MoveTo(Spawn.Position)
-wait(1)
+wait(0.4)
 for _,es in pairs(Objective.Radar:GetChildren()) do
     if es.Name == "Explosive1" or es.Name == "Explosive2" then
         while es:FindFirstChild("Handle") ~= nil do
@@ -97,13 +97,12 @@ end
 
     end
 end
-wait(1)
+wait(0.4)
 game:GetService("Players").LocalPlayer.Character:FindFirstChild("HumanoidRootPart").float:Destroy()
 clip()
 task.spawn(win)
 wait(4.5)
 queue_on_teleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/RomanTrotman/helmet/main/helmet.lua'))()")
 game:GetService("ReplicatedStorage").Remotes.Teleport.Replay:InvokeServer()
-
 
 
