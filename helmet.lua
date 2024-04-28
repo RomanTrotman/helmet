@@ -8,7 +8,7 @@ wait(4)
     game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Briefing"):WaitForChild("CutsceneSkipVote"):FireServer()
     repeat task.wait(0.025) until Workspace:FindFirstChild(game:GetService("Players").LocalPlayer.Name)
     --  
-    wait(1)
+    wait(2)
     local plr = game:GetService("Players").LocalPlayer
     local char = plr.Character
     local Map = game:GetService("Workspace").Map
