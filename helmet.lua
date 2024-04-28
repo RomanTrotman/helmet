@@ -37,7 +37,18 @@ function noclip()
 	Noclip = game:GetService('RunService').Stepped:Connect(Nocl)
 end
 
-noclip() -- to toggle noclip() and clip()
+function clip()
+	if Noclip then Noclip:Disconnect() end
+	Clip = true
+end
+
+local function win()
+	while task.wait(0.25) do
+		char:MoveTo(Objective.EscapeZone.Position + Vector3.new(0, 4, 0))
+	end
+end
+
+noclip()
 local bodyVelocity = Instance.new("BodyVelocity")
                bodyVelocity.Name = "float"
                bodyVelocity.Parent = game:GetService("Players").LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
@@ -88,7 +99,8 @@ end
 end
 wait(1)
 game:GetService("Players").LocalPlayer.Character:FindFirstChild("HumanoidRootPart").float:Destroy()
-char:MoveTo(Objective.EscapeZone.Position + Vector3.new(0, 6, 0))
+clip()
+task.spawn(win)
 wait(4.5)
 queue_on_teleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/RomanTrotman/helmet/main/helmet.lua'))()")
 game:GetService("ReplicatedStorage").Remotes.Teleport.Replay:InvokeServer()
